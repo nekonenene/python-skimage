@@ -17,6 +17,7 @@ def main():
 
     imshow(im)
     plt.title("original RGB image")
+    plt.gray()
     plt.show()
 
     # 組み込みのrgb2gray関数を使う gray = 0.2125 R + 0.7154 G + 0.0721 B
@@ -24,6 +25,7 @@ def main():
     imshow(im_gray1, vmin=0, vmax=1) # 型はfloat，範囲は[0,1]になる
     plt.colorbar()
     plt.title("rgb2gray min {0} max {1}".format(im_gray1.min(), im_gray1.max() ))
+    plt.gray()
     plt.show()
 
     # RGBの平均をグレースケール画像とする．最初にfloatに変換し（範囲は[0,255]になる），表示のときにuint8に変換する
@@ -33,6 +35,7 @@ def main():
     imshow(im_gray2, vmin=0, vmax=255)
     plt.colorbar()
     plt.title("(R+B+G)/3 min {0:.2f} max {1:.2f}".format(im_gray2.min(), im_gray2.max() ))
+    plt.gray()
     plt.show()
 
     # RGBの重み付き平均をグレースケール画像とする．
@@ -43,6 +46,7 @@ def main():
     imshow(im_gray3, vmin=0, vmax=255)
     plt.colorbar()
     plt.title("$\gamma'$ of PAL and NTSC min {0:.2f} max {1:.2f}".format(im_gray3.min(), im_gray3.max() ))
+    plt.gray()
     plt.show()
 
     # RGBの重み付き平均をグレースケール画像とする．その2．規格によって重み係数は異なる
@@ -54,6 +58,7 @@ def main():
     imshow(im_gray4, vmin=0, vmax=255)
     plt.colorbar()
     plt.title("$\gamma'$ of HDTV min {0:.2f} max {1:.2f}".format(im_gray4.min(), im_gray4.max() ))
+    plt.gray()
     plt.show()
 
     print("Successfully completed!!", flush=True)
