@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import imshow
 
-import skimage
 from skimage.io import imread, imsave
 
 from skimage.color import rgb2gray
@@ -11,19 +10,10 @@ from skimage.exposure import histogram, adjust_gamma
 from skimage.morphology import square
 from skimage import measure, color, morphology
 
-import cv2
-
-import numpy as np
-
-from ipywidgets import interact, interactive, fixed, RadioButtons
-import ipywidgets as widgets
-from IPython.display import display
-
-
 def main():
     # im = imread('lake.jpg')
     # im = imread('flag.png')[:,:,:3]  # RGBAの場合はRGBだけ取り出す
-    im = imread("girl.jpg")
+    im = imread("images/curry.jpg")
 
     imshow(im)
     plt.title("original RGB image")
