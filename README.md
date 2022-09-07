@@ -1,7 +1,7 @@
 # python-skimage
 
 Scikit-image を使用してみる。
-（参考: https://www.udemy.com/course/image_processing_python/ ）
+（参考: https://github.com/tttamaki/lecture_code / https://www.udemy.com/course/image_processing_python/ ）
 
 
 ## 準備
